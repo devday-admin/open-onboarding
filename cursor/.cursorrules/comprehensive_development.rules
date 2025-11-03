@@ -1,0 +1,254 @@
+# ---
+# name: comprehensive_development.rules
+# tool: Cursor
+# purpose: Comprehensive AI collaboration guide covering documentation, task execution, code quality, testing, and security best practices
+# inspired by community configs shared on Reddit
+# license: community-sourced / GPL-3.0
+# ---
+
+# AI-Assisted Development Guidelines
+
+## Guiding Principles
+
+**Simplicity**: Favor clear, maintainable solutions over complex architectures.
+
+**Iteration**: Enhance existing implementations rather than rebuilding from scratch unless fundamentally necessary.
+
+**Focus**: Concentrate on assigned tasks without expanding scope unnecessarily.
+
+**Quality**: Maintain clean, organized, well-tested, secure code.
+
+**Collaboration**: These guidelines enable effective human-AI teamwork.
+
+## Understanding Project Context
+
+### Documentation-First Approach
+
+Before starting any task, review relevant documentation:
+- Product requirements
+- `README.md` - Project overview, setup, patterns, stack
+- `docs/architecture.md` - System design, component relationships
+- `docs/technical.md` - Technical specifications, patterns
+- `tasks/tasks.md` - Current work and requirements
+
+If documentation is missing, unclear, or contradictory, request clarification.
+
+### Architectural Compliance
+
+- Understand module boundaries, data flow, interfaces, dependencies
+- Ensure changes comply with established architecture
+- Warn about violations and propose compliant alternatives
+
+### Pattern Consistency
+
+- Reference documentation to understand existing patterns
+- Use existing implementations before proposing new approaches
+
+## Task Management
+
+### Task Clarity
+
+Clearly understand requirements, acceptance criteria, and dependencies from task documentation and product requirements.
+
+### Change Protocol
+
+Before significant modifications:
+- **Assess Impact**: Identify affected components, dependencies, side effects
+- **Plan Steps**: Outline approach, tackle one logical change at a time
+- **Verify Testing**: Confirm testing strategy, add tests before implementing if needed
+
+### Progress Documentation
+
+- Update `docs/status.md` with task progress, issues, completions
+- Update `tasks/tasks.md` when requirements change
+
+## AI Collaboration Guidelines
+
+### Clear Instructions
+
+Provide specific, unambiguous instructions defining desired outcome, constraints, and context.
+
+### Maintain Context
+
+For multi-interaction tasks, explicitly reference previous context, decisions, or code.
+
+### Suggestion vs Application
+
+Clearly indicate whether AI should suggest for review or apply directly. Use prefixes like "Suggestion:" or "Applying:".
+
+### Critical Review
+
+Developers should question AI output, verify logic, and avoid blind trust of confident but potentially incorrect suggestions.
+
+### Focused Scope
+
+Guide AI to specific parts of tasks. Avoid overly broad requests that may lead to errors.
+
+### Leverage Strengths
+
+Use AI for boilerplate, refactoring patterns, syntax checking, test generation. Maintain human oversight for complex logic, architecture, security.
+
+### Incremental Progress
+
+Break complex tasks into smaller steps. Review and confirm each before proceeding.
+
+### Large Task Check-in
+
+Before significant code suggestions, confirm: "I've reviewed [document/context]. Goal is [objective], adhering to [constraint]. Proceeding with [step]."
+
+## Code Quality Standards
+
+### TypeScript
+
+Use strict typing (avoid `any`). Document complex logic or public APIs with JSDoc.
+
+### Readability
+
+Write clean, well-organized code.
+
+### File Size
+
+Keep files under 300 lines. Refactor proactively. Break large components into smaller, single-responsibility units.
+
+### Don't Repeat Yourself
+
+Actively reuse existing functionality. Refactor to eliminate duplication.
+
+### Build Tools
+
+Use project-specified build tools (not Bazel).
+
+### Linting/Formatting
+
+Conform to project's ESLint/Prettier rules.
+
+### Pattern Adherence
+
+Follow established patterns. Don't introduce new ones without discussion. If replacing patterns, remove old implementations completely.
+
+### File Naming
+
+Use clear, descriptive names. Avoid "temp", "refactored", "improved" in permanent files.
+
+### No Throwaway Scripts
+
+Don't commit one-time utility scripts to main codebase.
+
+## Refactoring Practices
+
+### Purpose
+
+Refactor to improve clarity, reduce duplication, simplify complexity, or align with architecture.
+
+### Holistic Approach
+
+Look for duplicate code, similar components, consolidation opportunities across affected areas.
+
+### Modify in Place
+
+Edit existing files directly. Don't duplicate and rename (e.g., `component-v2.tsx`).
+
+### Verify Integration
+
+After refactoring, ensure callers, dependencies, integration points function correctly. Run relevant tests.
+
+## Testing & Validation
+
+### Test-Driven Development
+
+**New Features**: Outline tests, write failing tests, implement code, refactor.
+**Bug Fixes**: Write reproducing test before fixing.
+
+### Comprehensive Coverage
+
+Write thorough unit, integration, end-to-end tests covering critical paths, edge cases, major functionality.
+
+### Tests Must Pass
+
+All tests must pass before committing or completing tasks. Report immediately if tests fail and cannot be easily fixed.
+
+### Mock Data
+
+Use mock data only in test environments. Development and production use real or realistic data.
+
+### Manual Verification
+
+Supplement automated tests with manual checks, especially for UI.
+
+## Debugging & Troubleshooting
+
+### Root Cause Fixes
+
+Prioritize fixing underlying issues over masking symptoms, unless temporary workarounds are explicitly agreed upon.
+
+### Console Analysis
+
+Always check browser and server console output after changes or when debugging. Report findings.
+
+### Targeted Logging
+
+For persistent issues, add specific logging to trace execution and states. Check the output.
+
+### Check Fixes Directory
+
+Before deep debugging, check `fixes/` directory for documented solutions to similar past issues.
+
+### Document Complex Fixes
+
+For bugs requiring significant effort, create concise `.md` file in `fixes/` directory detailing problem, investigation, solution. Use descriptive names (e.g., `fixes/resolve-race-condition-in-user-update.md`).
+
+### Research
+
+Use available tools to research solutions when stuck or unsure.
+
+## Security Practices
+
+### Server-Side Authority
+
+Keep sensitive logic, validation, data manipulation strictly server-side. Use secure API endpoints.
+
+### Input Handling
+
+Always sanitize and validate user input server-side.
+
+### Dependency Security
+
+Be mindful of security implications when adding or updating dependencies.
+
+### Credentials
+
+Never hardcode secrets or credentials. Use environment variables or secure secrets management.
+
+## Version Control
+
+### Git Practices
+
+- Commit frequently with clear, atomic messages
+- Keep working directory clean
+- Use `.gitignore` effectively
+
+### Branching
+
+Follow project's established branching strategy. Don't create new branches unless requested or necessary.
+
+### Environment Files
+
+Never commit `.env` files. Use `.env.example` for templates. Don't overwrite local `.env` without confirmation.
+
+### Environment Awareness
+
+Code should function correctly across environments (dev, test, prod). Use environment variables for configuration.
+
+### Server Management
+
+Kill related servers before starting new ones. Restart servers after configuration or backend changes.
+
+## Documentation Maintenance
+
+### Update Documentation
+
+If changes impact architecture, technical decisions, patterns, or task status, update relevant documentation.
+
+### Keep Rules Current
+
+Review and update this `.cursorrules` file periodically to reflect learned practices and project evolution.

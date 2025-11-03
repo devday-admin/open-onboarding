@@ -1,0 +1,305 @@
+# Open Onboarding - Configuration Index
+# Searchable manifest of AI configurations for developer onboarding
+
+configs:
+  # === CLAUDE CODE - ONBOARDING CONFIGS ===
+
+  - name: first_week_developer.md
+    tool: Claude Code
+    category: onboarding
+    path: claude/onboarding/first_week_developer.md
+    purpose: Simplified AI assistance for new developers during their first week, focusing on safe exploration, detailed explanations, and gradual learning
+    license: GPL-3.0
+    tags:
+      - onboarding
+      - first-week
+      - new-developer
+      - learning
+      - safe-exploration
+      - beginner-friendly
+      - explanations
+
+  - name: pair_programming_mentor.md
+    tool: Claude Code
+    category: onboarding
+    path: claude/onboarding/pair_programming_mentor.md
+    purpose: AI as mentoring partner for pair programming sessions, emphasizing teaching-style communication and best practices reinforcement
+    license: GPL-3.0
+    tags:
+      - onboarding
+      - pair-programming
+      - mentoring
+      - teaching
+      - code-review
+      - learning
+      - collaboration
+
+  - name: codebase_explorer.md
+    tool: Claude Code
+    category: onboarding
+    path: claude/onboarding/codebase_explorer.md
+    purpose: Safe codebase navigation for new developers, emphasizing read-only exploration and architecture understanding
+    license: GPL-3.0
+    tags:
+      - onboarding
+      - codebase-exploration
+      - architecture
+      - read-only
+      - learning
+      - safe-navigation
+      - documentation-discovery
+
+  # === CLAUDE CODE - GENERAL CONFIGS ===
+
+  - name: global_development.md
+    tool: Claude Code
+    category: general
+    path: claude/general/global_development.md
+    purpose: Standard collaborative development with planning-first approach, adapted for developers transitioning from onboarding to full team workflow
+    license: GPL-3.0
+    tags:
+      - developer
+      - collaboration
+      - planning
+      - peer-review
+      - communication
+      - standard-workflow
+
+  # === CLAUDE CODE - SPECIALIZED CONFIGS ===
+
+  - name: git_workflow_trunk_based.md
+    tool: Claude Code
+    category: specialized
+    path: claude/specialized/git_workflow_trunk_based.md
+    purpose: Trunk-based git workflow guide adapted for new developers learning version control practices and GitHub integration
+    license: GPL-3.0
+    tags:
+      - git
+      - workflow
+      - trunk-based
+      - github
+      - version-control
+      - onboarding
+      - best-practices
+      - ci-cd
+
+  - name: team_tpm_security.md
+    tool: Claude Code
+    category: specialized
+    path: claude/specialized/team_tpm_security.md
+    purpose: Team practices and role-based development for Scrum/Kanban teams, adapted to help new developers understand team dynamics and ceremonies
+    license: GPL-3.0
+    tags:
+      - team
+      - scrum
+      - kanban
+      - agile
+      - security
+      - onboarding
+      - team-integration
+      - devops
+      - qa
+
+  # === CURSOR CONFIGS ===
+
+  - name: onboarding_buddy.rules
+    tool: Cursor
+    category: onboarding
+    path: cursor/.cursorrules/onboarding_buddy.rules
+    purpose: Pair programming configuration for new developers, providing mentorship-style assistance with learning path guidance
+    license: GPL-3.0
+    tags:
+      - cursor
+      - onboarding
+      - pair-programming
+      - mentoring
+      - learning-path
+      - code-review-training
+      - gradual-independence
+
+  - name: comprehensive_development.rules
+    tool: Cursor
+    category: general
+    path: cursor/.cursorrules/comprehensive_development.rules
+    purpose: Complete AI collaboration framework adapted for onboarding, covering documentation, testing, code quality, and security practices
+    license: GPL-3.0
+    tags:
+      - cursor
+      - ai-collaboration
+      - documentation
+      - testing
+      - tdd
+      - security
+      - refactoring
+      - code-quality
+      - typescript
+
+  # === CODEX CONFIGS ===
+
+  - name: autonomous_agent_style.md
+    tool: Codex
+    category: general
+    path: codex/general/autonomous_agent_style.md
+    purpose: Autonomous agent operating principles adapted for learning scenarios, emphasizing self-directed exploration with comprehensive logging
+    license: GPL-3.0
+    tags:
+      - codex
+      - autonomous
+      - persistence
+      - debugging
+      - verification
+      - learning
+      - self-directed
+      - onboarding
+
+  # === CLINE CONFIGS ===
+
+  - name: default_cline.md
+    tool: Cline
+    category: general
+    path: cline/.clinerules/default_cline.md
+    purpose: Memory bank system for maintaining onboarding progress and project context across agent sessions
+    license: GPL-3.0
+    tags:
+      - cline
+      - memory-bank
+      - context-management
+      - documentation
+      - session-continuity
+      - onboarding-progress
+      - learning-milestones
+
+# === DOCUMENTATION ===
+
+documentation:
+  - name: onboarding-checklist.md
+    category: guides
+    path: docs/onboarding-checklist.md
+    purpose: First day, week, and month task checklist for new developers using AI tools
+    tags:
+      - onboarding
+      - checklist
+      - first-day
+      - first-week
+      - first-month
+      - tasks
+
+  - name: quickstart-guide.md
+    category: guides
+    path: docs/quickstart-guide.md
+    purpose: 15-minute setup guide for new developers to get started with AI tools
+    tags:
+      - onboarding
+      - quick-start
+      - setup
+      - getting-started
+      - beginner
+
+  - name: first-week-guide.md
+    category: guides
+    path: docs/first-week-guide.md
+    purpose: Detailed week-by-week guidance for new developers in their first month
+    tags:
+      - onboarding
+      - first-week
+      - week-by-week
+      - learning-path
+      - progression
+
+  - name: ai-tools-comparison.md
+    category: guides
+    path: docs/ai-tools-comparison.md
+    purpose: Comparison of AI tools to help new developers choose the right tool for their workflow
+    tags:
+      - onboarding
+      - comparison
+      - tools
+      - decision-making
+      - claude
+      - cursor
+      - cline
+      - codex
+
+  - name: glossary.md
+    category: guides
+    path: docs/glossary.md
+    purpose: Glossary of AI-assisted development terms for new developers
+    tags:
+      - onboarding
+      - glossary
+      - terminology
+      - learning
+      - reference
+
+# === TEMPLATES ===
+
+templates:
+  - name: team-config-template.md
+    category: templates
+    path: templates/team-config-template.md
+    purpose: Template for teams to customize AI configs for their specific onboarding workflow
+    tags:
+      - template
+      - team-customization
+      - onboarding
+      - workflow
+      - standardization
+
+  - name: personal-config-template.md
+    category: templates
+    path: templates/personal-config-template.md
+    purpose: Template for individual developers to customize their AI tool preferences
+    tags:
+      - template
+      - personal
+      - customization
+      - preferences
+      - individual
+
+  - name: onboarding-workflow-template.md
+    category: templates
+    path: templates/onboarding-workflow-template.md
+    purpose: Manager's playbook template for standardizing team onboarding with AI tools
+    tags:
+      - template
+      - manager
+      - playbook
+      - onboarding
+      - team-lead
+      - standardization
+      - workflow
+
+# === TAG INDEX FOR QUICK REFERENCE ===
+#
+# Onboarding Stages:
+#   - first-day, first-week, first-month, onboarding
+#
+# Developer Roles:
+#   - new-developer, junior-developer, intern, mentor, manager, team-lead
+#
+# Learning Activities:
+#   - pair-programming, code-review, codebase-exploration, learning
+#   - safe-exploration, read-only, architecture, documentation-discovery
+#
+# Learning Focus:
+#   - mentoring, teaching, learning-path, explanations, beginner-friendly
+#   - gradual-learning, gradual-independence, progression
+#
+# Team Integration:
+#   - team, team-integration, collaboration, standardization, workflow
+#   - scrum, kanban, agile
+#
+# Technical Areas:
+#   - git, version-control, trunk-based, github, ci-cd
+#   - testing, tdd, security, code-quality, refactoring
+#
+# Tools:
+#   - claude, cursor, codex, cline, ai-collaboration
+#
+# Documentation & Resources:
+#   - guides, checklist, quick-start, getting-started, comparison
+#   - glossary, terminology, reference
+#
+# Templates:
+#   - template, customization, playbook, personal, team-customization
+#

@@ -1,0 +1,38 @@
+name: Config or Onboarding Feedback
+description: Share how you're using or modifying the repo for onboarding
+title: "[Feedback] "
+labels: ["feedback", "config"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! We're testing how teams use and adapt this project for onboarding and developer setup. Please share as much context as you're comfortable with.
+  - type: input
+    id: team_context
+    attributes:
+      label: Team / Environment
+      description: What kind of team or environment are you testing this in? (e.g. startup, enterprise, internal tools team)
+  - type: textarea
+    id: how_used
+    attributes:
+      label: How you're using it
+      description: What are you using this project for (e.g. onboarding, training, code quality checks)?
+      placeholder: Describe how your team integrates or runs it
+  - type: textarea
+    id: config_changes
+    attributes:
+      label: Config changes
+      description: What did you change or add in your config? Feel free to paste snippets or summaries.
+  - type: dropdown
+    id: shared_publicly
+    attributes:
+      label: Will you share your config publicly?
+      options:
+        - Yes, planning to open-source it
+        - Not yet, testing internally
+        - No, private use only
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback or ideas
+      description: Anything that would make this easier to adopt or extend?
